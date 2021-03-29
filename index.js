@@ -5,8 +5,8 @@ const io = require('socket.io')(http);
 const port = process.env.PORT || 8080;
 
 app.get('/', function(req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    // res.header("Access-Control-Allow-Origin", "*");
+    // res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.render('index.ejs');
 });
 
