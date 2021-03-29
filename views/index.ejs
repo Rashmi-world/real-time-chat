@@ -21,9 +21,9 @@
     <input id="txt" autocomplete="off" autofocus="on" oninput="isTyping()" placeholder="type your message here..." /><button>Send</button>
 </form>
 <script>
-    const port = process.env.PORT || 8080;
-    const url = 'https://secret-chat-lab.herokuapp.com:'+port;
-    var socket = io.connect(url);
+
+    <!--const url = <%= urL %>;-->
+    var socket = io.connect(<%= urL %>);
 
     // submit text message without reload/refresh the page
     $('form').submit(function(e){
