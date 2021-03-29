@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%=urlValue%></title>
+    <title>CHAT SERVER | SOUMYA DARSHAN PADHY</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font: 13px Helvetica, Arial; }
@@ -16,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body>
+<input type="text" value="<%=urlValue%>" id="urlV">
 <ul id="messages"></ul>
 <form action="/" method="POST" id="chatForm">
     <input id="txt" autocomplete="off" autofocus="on" oninput="isTyping()" placeholder="type your message here..." /><button>Send</button>
@@ -23,7 +24,8 @@
 <script>
 
 
-    var socket = io.connect(<%=urlValue%>);
+    var url = $("#urlV").val();
+    var socket = io.connect(url);
 
     // submit text message without reload/refresh the page
     $('form').submit(function(e){
