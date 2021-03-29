@@ -3,13 +3,13 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 8080;
-const Url = 'https://secret-chat-lab.herokuapp.com:'+port;
+const Url = "https://secret-chat-lab.herokuapp.com:"+port;
 
 app.get('/', function(req, res) {
     // res.header("Access-Control-Allow-Origin", "*");
     // res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.render('index.ejs',{
-        urL:Url
+        urlValue:Url
     });
 });
 

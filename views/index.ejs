@@ -22,9 +22,8 @@
 </form>
 <script>
 
-    console.log(<%= urL %>);
-    //<!--//const url = -->
-    var socket = io.connect(<%= urL %>);
+
+    var socket = io.connect(<%=urlValue%>);
 
     // submit text message without reload/refresh the page
     $('form').submit(function(e){
